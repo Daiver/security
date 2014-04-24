@@ -26,10 +26,10 @@ def extract_last_bit(img):
     return map(bin2, img)
 
 if __name__ == '__main__':
-    #img  = cv2.imread('../5/0009.bmp', 0)
-    #img2 = cv2.imread('../5/0010.bmp', 0)
-    img  = cv2.imread('../5/0007.bmp', 0)
-    img2 = cv2.imread('../5/0008.bmp', 0)
+    img  = cv2.imread('../5/0009.bmp', 0)
+    img2 = cv2.imread('../5/0010.bmp', 0)
+    #img  = cv2.imread('../5/0007.bmp', 0)
+    #img2 = cv2.imread('../5/0008.bmp', 0)
     cv2.imshow('1', img)
     cv2.imshow('2', img2)
     h1, p1 = np.histogram(img, 256, [0, 255])
