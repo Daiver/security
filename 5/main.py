@@ -17,7 +17,7 @@ def viz(h):
     img = np.zeros((height, width))
     for i, x in enumerate(h):
         for j in xrange(x/50):
-            img[height - j - 1][i*5] = 255
+            img[height - j - 1][i*4] = 255
     cv2.imshow('', img)
     cv2.waitKey()
 
@@ -27,9 +27,10 @@ def extract_last_bit(img):
 
 if __name__ == '__main__':
     img  = cv2.imread('../5/0009.bmp', 0)
+    img = cv2.imread('/home/daiver/sec_images/images/sailboat_at_anchor_2.jpg', 0)
+    img2 = cv2.imread('/home/daiver/sec_images/images/sailboat_at_anchor_1.jpg', 0)
+    img  = cv2.imread('../5/0009.bmp', 0)
     img2 = cv2.imread('../5/0010.bmp', 0)
-    #img  = cv2.imread('../5/0007.bmp', 0)
-    #img2 = cv2.imread('../5/0008.bmp', 0)
     cv2.imshow('1', img)
     cv2.imshow('2', img2)
     h1, p1 = np.histogram(img, 256, [0, 255])
