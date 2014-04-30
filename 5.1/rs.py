@@ -37,7 +37,9 @@ def compute(img, fl):
     reg = 0
     sin = 0
     const = 0
-    for b in madeBlocks(img):
+    bb = madeBlocks(img)
+    print len(bb)
+    for b in bb:
         fited, flip_fited =  fit_f(b) , fit_f(flip(b, fl))
         if flip_fited  > fited: reg += 1
         if flip_fited  < fited: sin += 1
