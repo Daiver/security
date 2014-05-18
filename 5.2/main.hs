@@ -50,5 +50,5 @@ test name = do
             print $ length $ cutBlocks x 8
 
 main = do
-    test "../5/0009.bmp"
-    test "../5/0010.bmp"
+    test "../5/0002.bmp"
+    test "../5/0003.bmp"
